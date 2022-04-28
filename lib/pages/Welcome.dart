@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intro/widgets/LargerText.dart';
 
 void main() => runApp(Welcome());
 
@@ -10,6 +11,7 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  // Array of images used as background
   List images = [
     "welcome-1.png",
     "welcome-2.png",
@@ -24,17 +26,34 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // PageView builder creates a scrollable list
       body: PageView.builder(
           scrollDirection: Axis.vertical,
           itemCount: images.length,
           itemBuilder: (_, index) {
+          double c_width = MediaQuery.of(context).size.width*0.8;
             return Container(
+              // maxFinite is largest value available within infinity
               width: double.maxFinite,
               height: double.maxFinite,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage("assets/images/" + images[index]),
-                      fit: BoxFit.cover)),
+                      fit: BoxFit.cover)
+              ),
+              child: Container(
+                width: c_width,
+                margin: const EdgeInsets.only(top: 150, left: 60, right: 20),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                      // Reusable large bold text widget
+                        LargeText(text: "Hello"),
+                    ],)
+                  ],
+                ),
+              ),
             );
           }),
     );
