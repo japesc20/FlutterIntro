@@ -8,7 +8,7 @@ class LargeText extends StatelessWidget {
 
   LargeText({Key? key, 
   // variables definitions set
-  this.size = 30,
+  this.size = 35,
   required this.text, 
   this.color = Colors.black,}) : super(key: key);
 
