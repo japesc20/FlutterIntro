@@ -8,15 +8,13 @@ class Welcome extends StatefulWidget {
 
   @override
   State<Welcome> createState() => _WelcomeState();
+
 }
 
 class _WelcomeState extends State<Welcome> {
   // Array of images used as background
   List images = [
     "welcome-1.png",
-    "welcome-2.png",
-    "welcome-3.jpg",
-    "welcome-4.jpg",
     "welcome-5.png",
     "welcome-6.jpg",
     "welcome-7.png",
@@ -59,13 +57,13 @@ class _WelcomeState extends State<Welcome> {
                             ),
                             Padding(
                               padding:
-                                const EdgeInsets.only(left: 10, bottom: 20),
-                                child: Text(
-                                  "Jacob Petrakovitz",
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 211, 31, 31),
-                                  ),
+                                  const EdgeInsets.only(left: 10, bottom: 20),
+                              child: Text(
+                                "Jacob Petrakovitz",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 211, 31, 31),
                                 ),
+                              ),
                             ),
                           ],
                         ),
@@ -79,17 +77,17 @@ class _WelcomeState extends State<Welcome> {
                   Center(
                     child: Expanded(
                       flex: 3,
-                        child: Container(
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 90 ,bottom: 15),
-                            child: Icon(
-                              Icons.arrow_downward_rounded,
-                              color: Colors.black38,
-                              size: 60,
-                            ),
-                          )
+                      child: Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 90, bottom: 40),
+                          child: Icon(
+                            Icons.arrow_downward_rounded,
+                            color: Colors.black54,
+                            size: 60,
+                          ),
                         ),
                       ),
+                    ),
                   )
                 ],
               ),
